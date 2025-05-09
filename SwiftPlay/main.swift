@@ -21,4 +21,20 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
 }
 
 
-print(twoSum([-1,2,3, 1], 0))
+//print(twoSum([-1,2,3, 1], 0))
+
+
+var list = LinkedList<Int>()
+list.append(LinkedListNode<Int>(next:nil, data:1))
+list.append(LinkedListNode<Int>(next:nil, data:2))
+list.append(LinkedListNode<Int>(next:nil, data:3))
+
+list.displayList()
+print(list.count)
+
+
+list.reverse()
+list.displayList()
+print(list.count)
+
+
