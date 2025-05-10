@@ -42,4 +42,24 @@ class DataStructureCatalog {
             print("Dequeue \(element)")
         }
     }
+    
+    public func testBST() {
+        var tree = BinarySearchTree(root:Node(data:2))
+        var input = [5,4,3,1,0,6,8,2,3,41,7,6,34,7,3]
+        for x in input {
+            tree.insert(x)
+        }
+        print(tree.inorderTraversal())
+
+        if let nodeLookup = tree.search(100) {
+            print("Found node with data \(nodeLookup.data)")
+        }
+
+
+        let valuesToDelete = [7,8,0,41]
+        for val in valuesToDelete {
+            tree.deleteValue(val)
+            print(tree.inorderTraversal())
+        }
+    }
 }
