@@ -9,6 +9,18 @@ import Foundation
 
 class DataStructureCatalog {
     public static let shared = DataStructureCatalog()
+    
+    public func testStack() {
+        let stack = Stack<Int>()
+        stack.push(1)
+        stack.push(1)
+        stack.push(1)
+        stack.push(1)
+        while let element = stack.pop() {
+            print("Popped element \(element)")
+        }
+    }
+    
     public func testLinkedList() {
         let list = LinkedList<Int>()
         list.append(LinkedListNode<Int>(next:nil, data:1))
